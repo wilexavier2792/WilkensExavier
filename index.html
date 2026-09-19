@@ -15,7 +15,7 @@
         .hero h2 { font-size: 2.5em; margin-bottom: 20px; }
         .hero p { font-size: 1.2em; margin-bottom: 30px; }
         .button-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-        a.btn { display: inline-block; padding: 12px 30px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: bold; transition: transform .2s, box-shadow .2s; }
+        a.btn { display: inline-block; padding: 12px 30px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: bold; transition: transform .2s, box-shadow .2s ease; }
         a.btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px #0003; }
         a.btn-secondary { background: transparent; color: white; border: 2px solid white; }
         a.btn-secondary:hover { background: white; color: #667eea; }
@@ -29,9 +29,14 @@
         .skill-card li { padding: 5px 0; }
         .skill-card li::before { content: '✓ '; color: #667eea; font-weight: bold; }
         .contact-item a, footer a { color: #667eea; text-decoration: none; font-weight: bold; }
-        .pdf-viewer { width: 100%; height: 800px; border: 1px solid #ddd; border-radius: 8px; margin-top: 20px; }
+        .showcase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 20px; }
+        .showcase-card { background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 20px; }
+        .showcase-card h3 { margin-bottom: 12px; color: #2c3e50; }
+        .pdf-viewer, .guide-viewer { width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-top: 20px; }
+        .pdf-viewer { height: 800px; }
+        .guide-viewer { height: 980px; }
         footer { padding: 20px; margin-top: 40px; }
-        @media (max-width: 768px) { .hero h2 { font-size: 1.8em; } .section { padding: 25px; } .pdf-viewer { height: 600px; } a.btn { width: 100%; text-align: center; } }
+        @media (max-width: 768px) { .hero h2 { font-size: 1.8em; } .section { padding: 25px; } .showcase-grid { grid-template-columns: 1fr; } .pdf-viewer { height: 600px; } .guide-viewer { height: 700px; } a.btn { width: 100%; text-align: center; } }
     </style>
 </head>
 <body>
@@ -48,13 +53,25 @@
         </section>
 
         <section class="section">
-            <h2>Latest Project PDF</h2>
-            <p>Read my most recently uploaded project directly on this page, or open it in a new tab.</p>
-            <iframe class="pdf-viewer" src="Exavier.Wilkens.SBA935.7.1%20-%20Copy.pdf" title="Wilkens Exavier latest project PDF"></iframe>
-            <p style="margin-top:15px"><a href="Exavier.Wilkens.SBA935.7.1%20-%20Copy.pdf" target="_blank" rel="noopener">Open the latest PDF in a new tab</a></p>
+            <h2>Latest Project PDF &amp; PSU Guide</h2>
+            <div class="showcase-grid">
+                <div class="showcase-card">
+                    <h3>Latest Project PDF</h3>
+                    <p>Read my most recently uploaded project directly on this page, or open it in a new tab.</p>
+                    <iframe class="pdf-viewer" src="Exavier.Wilkens.SBA935.7.1%20-%20Copy.pdf" title="Wilkens Exavier latest project PDF"></iframe>
+                    <p style="margin-top:15px"><a href="Exavier.Wilkens.SBA935.7.1%20-%20Copy.pdf" target="_blank" rel="noopener">Open the latest PDF in a new tab</a></p>
+                </div>
+                <div class="showcase-card">
+                    <h3>PSU Removal Guide</h3>
+                    <p>Step-by-step safety guide for removing a redundant PSU from a system.</p>
+                    <iframe class="guide-viewer" src="psu-removal-guide.html" title="PSU removal guide"></iframe>
+                    <p style="margin-top:15px"><a href="psu-removal-guide.html" target="_blank" rel="noopener">Open the PSU guide in a new tab</a></p>
+                </div>
+            </div>
         </section>
 
-        <section class="section"><h2>About Me</h2>
+        <section class="section">
+            <h2>About Me</h2>
             <ul style="margin-left:20px">
                 <li>Success-driven IT professional with 10+ years of experience in multimedia technology.</li>
                 <li>Pursuing CompTIA+ at Per Scholas with 600+ hours of hands-on lab experience.</li>
@@ -73,9 +90,9 @@
             </div>
         </section>
 
-        <section class="section"><h2>Selected Projects</h2><ul style="margin-left:20px; line-height:2"><li>Educational how-to presentation on device settings</li><li>Deconstructing and rebuilding PC components</li><li>Redundant PSU removal guide</li><li>Launching an EC2 server for a shopping web app</li></ul></section>
+        <section class="section"><h2>Selected Projects</h2><ul style="margin-left:20px; line-height:2"><li>Educational how-to presentation on device settings</li><li>Deconstructing and rebuilding computers for hands-on training</li><li>Multimedia content creation and technical documentation</li><li>IT support workflow optimization and troubleshooting</li></ul></section>
 
-        <section class="section"><h2>Get In Touch</h2><div class="contact-info"><div class="contact-item"><h4>Email</h4><a href="mailto:wilkens.exavier1@gmail.com">wilkens.exavier1@gmail.com</a></div><div class="contact-item"><h4>LinkedIn</h4><a href="https://www.linkedin.com/in/wilexavier" target="_blank" rel="noopener">linkedin.com/in/wilexavier</a></div></div></section>
+        <section class="section"><h2>Get In Touch</h2><div class="contact-info"><div class="contact-item"><h4>Email</h4><a href="mailto:wilkens.exavier1@gmail.com">wilkens.exavier1@gmail.com</a></div><div class="contact-item"><h4>Location</h4><p>New York, NY</p></div><div class="contact-item"><h4>Portfolio</h4><a href="https://github.com/wilexavier2792/WilkensExavier" target="_blank" rel="noopener">GitHub Repository</a></div></div></section>
     </main>
     <footer><p>&copy; 2026 WilkensExavier. All rights reserved.</p><p><a href="https://github.com/wilexavier2792/WilkensExavier" target="_blank" rel="noopener">View Repository on GitHub</a></p></footer>
 </body>
