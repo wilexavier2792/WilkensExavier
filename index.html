@@ -73,6 +73,87 @@
 
         <section class="section"><h2>Selected Projects</h2><ul style="margin-left:20px; line-height:2"><li>Educational how-to presentation on device settings</li><li>Deconstructing and rebuilding PC tower units</li><li>Informational how-to guides on removing power supply units</li><li>Step-by-step guide on launching an EC2 server for a shopping web app</li><li>Guide to understanding TCP/IP port numbers and configurations</li></ul></section>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redundant PSU Removal Guide | Wilkens Exavier</title>
+  <style>
+    :root { --navy: #2c3e50; --purple: #667eea; --bg: #f4f4f4; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", Tahoma, sans-serif; line-height: 1.6; color: #333; background: var(--bg); }
+    header { padding: 28px 20px; color: white; text-align: center; background: var(--navy); }
+    main { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+    .section { margin-bottom: 30px; padding: 35px; background: white; border-radius: 8px; box-shadow: 0 2px 10px #0000001a; }
+    h1, h2, h3 { color: var(--navy); }
+    h1 { color: white; }
+    h2 { padding-bottom: 10px; border-bottom: 3px solid var(--purple); }
+    h3 { color: var(--purple); margin-top: 24px; }
+    .image-section { text-align: center; }
+    img { max-width: 100%; height: auto; border-radius: 6px; }
+    .guide-step { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 25px; align-items: center; margin-top: 30px; }
+    .guide-step.reverse .image-section { order: 2; }
+    .guide-step.reverse .guide-content { order: 1; }
+    .notice { padding: 15px 20px; border-left: 4px solid var(--purple); background: #f8f9fa; }
+    a { color: var(--purple); font-weight: bold; }
+    @media (max-width: 700px) { .guide-step { grid-template-columns: 1fr; } .guide-step.reverse .image-section, .guide-step.reverse .guide-content { order: initial; } .section { padding: 25px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Redundant Power Supply Unit (PSU) Removal Guide</h1>
+    <p>Wilkens Exavier</p>
+  </header>
+  <main>
+    <section class="section">
+      <h2>Overview</h2>
+      <p>This guide provides step-by-step instructions for safely removing a redundant power supply unit from your system.</p>
+      <p class="notice"><strong>Safety first:</strong> Shut the system down, unplug the AC power cable, and allow the unit to cool before beginning. Handle all internal components carefully.</p>
+    </section>
+
+    <section class="section">
+      <h2>Power Supply Unit Components</h2>
+      <div class="image-section">
+        <img src="psu-components.jpg" alt="PSU components showing the power connectors, AC power cable port, and PSU fan unit">
+        <div style="margin-top: 15px; text-align: left;">
+          <p><strong>1. 4-Pin Power Connector</strong> — Main power connector to the motherboard</p>
+          <p><strong>2. 6-Pin Power Connector</strong> — Secondary power connector</p>
+          <p><strong>3. AC Power Cable Port</strong> — Power input from the wall outlet</p>
+          <p><strong>4. PSU Fan Unit</strong> — Cooling fan for the power supply</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Removal Steps</h2>
+      <div class="guide-step">
+        <div class="image-section"><img src="psu-step1.jpg" alt="Disconnecting the 6-pin connector and removing the 6-pin ground connector"></div>
+        <div class="guide-content">
+          <h3>Step 1: Disconnect Power Connectors</h3>
+          <ul>
+            <li>Remove the screws mounting the PSU.</li>
+            <li>Carefully disconnect the 6-pin connector from the motherboard.</li>
+            <li>Remove the 6-pin ground connector from the motherboard.</li>
+            <li>Confirm the system is powered down and unplugged before continuing.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="guide-step reverse">
+        <div class="image-section"><img src="psu-step2.jpg" alt="Disconnecting the 4-pin connector and sliding the PSU out of the case"></div>
+        <div class="guide-content">
+          <h3>Step 2: Remove PSU from Case</h3>
+          <ul>
+            <li>Locate and disconnect the 4-pin connector from the motherboard near the CPU fan.</li>
+            <li>Carefully slide the PSU out of the case.</li>
+            <li>Handle it carefully to avoid damaging internal components.</li>
+            <li>Set the PSU aside in a safe location.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <p><a href="index.html">← Return to the portfolio page</a></p>
+  </main>
+</body>
         <section class="section"><h2>Get In Touch</h2><div class="contact-info"><div class="contact-item"><h4>Email</h4><a href="mailto:wilkens.exavier1@gmail.com">wilkens.exavier1@gmail.com</a></div><div class="contact-item"><h4>LinkedIn</h4><a href="https://www.linkedin.com/in/wilexavier" target="_blank" rel="noopener">linkedin.com/in/wilexavier</a></div></div></section>
     </main>
     <footer><p>&copy; 2026 WilkensExavier. All rights reserved.</p><p><a href="https://github.com/wilexavier2792/WilkensExavier" target="_blank" rel="noopener">View Repository on GitHub</a></p></footer>
